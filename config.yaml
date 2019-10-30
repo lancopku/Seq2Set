@@ -1,0 +1,26 @@
+data: './data/data/save_data'
+log: './data/data/log/'
+epoch: 10
+batch_size: 64
+param_init: 0.1
+optim: 'adam'
+learning_rate: 0.00001
+max_grad_norm: 8
+learning_rate_decay: 0.5
+schedule: True
+bidirec: True
+start_decay_at: 2
+baseline: 'self_critic'
+reward: 'f1'
+emb_size: 256
+encoder_hidden_size: 256
+decoder_hidden_size: 512
+num_layers: 2
+dropout: 0.5
+max_tgt_len: 11
+eval_interval: 50
+save_interval: 500
+max_generator_batches: 32
+metric: ['hamming_loss', 'macro_f1', 'micro_f1']
+shared_vocab: False
+beam_size: 10
